@@ -7,8 +7,8 @@ for i in range(tamanho_vetores):
     
     vetores.append(vetor)
 
-def produto_escalar(vetor1, vetor2):
-    return  (x1*x2 + y1*y2)
+def produto_interno(vetor1, vetor2):
+    return  (vetor1[0]*x2 + y1*y2)
 
 def projecao(vetor1, vetor2):
     return (produto_escalar(vetor1, vetor2))/(produto_escalar(vetor2, vetor2))
