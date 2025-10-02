@@ -3,17 +3,22 @@ vetor = []
 vetores = []
 
 for i in range(tamanho_vetores):
-    vetor = input().split(" ")
+    vetor = list(map(int, input().split(" ")))
     
     vetores.append(vetor)
 
 def produto_interno(vetor1, vetor2):
-    return  (vetor1[0]*x2 + y1*y2)
+    return  (vetor1[0]*vetor2[0] + vetor1[1]*vetor2[1])
 
-def projecao(vetor1, vetor2):
-    return (produto_escalar(vetor1, vetor2))/(produto_escalar(vetor2, vetor2))
+def projecao(v1, v2):
+    for i in range(tamanho_vetores):
+        v2[i] = (produto_interno(v1, v2)/produto_interno(v2, v2))*v2[i]
+    return(v2)
 
-def norma (vetor_unico):
-    return sqrt(vetor_unico, vetor_unico)
+def norma (v):
+    acum = 0
+    for i in range(len(v)):
+        acum += v[i]**2
+    return acum**0.5
 
-print(vetores)
+print(projecao(vetores[0], vetores[1]))
