@@ -57,4 +57,4 @@ def gram_schmidt(vetores, ortonormalizar=False):
 
     return vetores_ortogonalizados
 
-print()
+print(gram_schmidt(vetores,True))
